@@ -14,9 +14,21 @@ class Song
      song.save
      song
    end   
-   def self.new_by_name
-     song = Song.new_by_name (" ")
-     song.name
+   def self.new_by_name(name)
+     song = Song.new
+     song.name = name 
      song 
    end 
+   
+   def self.create_by_name(name)  
+     song = Song.new 
+     song.name = name
+     song.save
+     song
+   end 
+   def self.find_by_name(name)
+     song = Song.new
+     song.find_by_name
+     @@all << name 
+   end   
 end
