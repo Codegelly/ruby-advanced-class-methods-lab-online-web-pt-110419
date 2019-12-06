@@ -12,7 +12,11 @@ class Song
    def self.create
      song = Song.new
      song.save
-    # binding.pry
      song
    end   
+   def self.new_by_name
+     song = Song.new_by_name (" ")
+     song.name
+     song 
+   end 
 end
