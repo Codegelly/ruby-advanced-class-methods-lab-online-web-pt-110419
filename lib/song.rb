@@ -27,7 +27,7 @@ class Song
      song
    end 
    def self.find_by_name(song_name)
-     @@all.detect {|song| song_name == song.name}  
+     @@all.detect {|song| song.name == song_name}  
   end   
   
   def self.find_or_create_by_name(song_name)
@@ -38,7 +38,7 @@ class Song
        self.create_by_name(song_name)
     end 
   def self.alphabetical 
-   @@all.sort_by {|song|song.name}
+   @@all.sort_by {|song| song.name}
   end   
   end   
 end
