@@ -43,7 +43,7 @@ class Song
   end   
   def self.new_from_filename(file_name)
    song_arry =  file_name.split("-")
-   song_arry.delete[2] 
+   song_arry[1]=song_arry[1].chomp(".mp3")
   end  
   
 end
