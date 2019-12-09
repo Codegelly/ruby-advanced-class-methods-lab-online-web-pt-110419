@@ -42,12 +42,12 @@ class Song
    @@all.sort_by {|s| s.name}
   end   
   def self.new_from_filename(filename)
-   song_arry=filename.split("-")
-   song_arry[1]=song_arry[1].chomp(".mp3")
-   song=Song.new 
-   song.name=song_arry[1]
-   song.artist_name=song_arry[0]
-   song
+  song_array = filename.split(" - ")
+    song_array[1] = song_array[1].chomp(".mp3")
+    song = self.new
+    song.name = song_array[1]
+    song.artist_name = song_array[0]
+    song
   end  
   
   def self.create_from_filename(file_name)
