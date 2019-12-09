@@ -41,8 +41,8 @@ class Song
   def self.alphabetical 
    @@all.sort_by {|s| s.name}
   end   
-  def self.new_from_filename(file_name)
-   song_arry =file_name.split("-")
+  def self.new_from_filename(filename)
+   song_arry =filename.split("-")
    song_arry[1]=song_arry[1].chomp(".mp3")
    song=Song.new 
    song.name =song_arry[1]
@@ -50,4 +50,7 @@ class Song
    song
   end  
   
+  def self.create_from_filename(file_name)
+    
+  end  
 end
