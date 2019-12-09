@@ -55,6 +55,7 @@ class Song
    song = Song.create
    song.name = result.name 
    song.artist_name = result.artist_name
+   song 
    end  
   
   # def self.destroy_all 
