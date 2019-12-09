@@ -46,7 +46,7 @@ class Song
    song_arry[1]=song_arry[1].chomp(".mp3")
    song=Song.new 
    song.name = song_arry[1]
-   song.artist_name = song_arry[0]
+   song.artist_name=song_arry[0]
    song
   end  
   
